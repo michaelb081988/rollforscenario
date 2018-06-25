@@ -8,7 +8,7 @@ Changes should be made as pull requests. These changes will be checked before co
 http://www.rollforscenario.com/
 
 # Todo list
-* Seperate rollforscenario-new.js JSON entry to a seperate file and make the js file load it.
+* ~~Seperate rollforscenario-new.js JSON entry to a seperate file and make the js file load it.~~
 * Clean up unused js files
 * Clean up images
   * Sort images into folders by common, then year for the various scenarios/objectives.

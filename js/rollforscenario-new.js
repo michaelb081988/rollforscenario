@@ -2,7 +2,8 @@
 	var lasRanNum = 0; // The last scenario, used to skip re-rolling into the same one.
 	
 	// This will become the json string we read
-	
+	var j = {};	
+
 	// This gets us a random number that is NOT the same as the old one. Multiply Math.random by the number of scenarios available and add 1 so we don't get 0.
 	function randomNumber() {
 		if(lasRanNum == ranNum) {

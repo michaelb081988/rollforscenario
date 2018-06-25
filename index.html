@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" manifest="junk-404-link">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Roll up a random scenario with RollForScenario.com. Steamroller 2017 scenarios brought up in a flash.">
+    <meta name="author" content="@ManifestFailure">
+	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-61711144-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+    <title>Scenario Generator - Roll for Scenario - Steamroller 2017</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href=""><img src="favicon-96x96.png" style="width:25px; display: inline;" alt="Logo" /> Roll for Scenario</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="legal.html">Legal</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+	<div class="top-padding">&nbsp;</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h2 style="margin-top:0px;">Scenario</h2>
+				<p id="scenario-name"></p>
+			</div>
+			<div class="col-md-3" style="padding-top:5px;">
+				<button type="button" class="btn btn-danger" id="reroll">Re-roll scenario</button>
+			</div>
+			<div class="col-md-3" style="padding-top:5px;">
+				<select id="scenario">
+					<option id="0">Choose a Scenario</option>
+					<option id="1">Scenario 1: The Pit II</option>
+					<option id="2">Scenario 2: Standoff</option>
+					<option id="3">Scenario 3: Spread the Net</option>
+					<option id="4">Scenario 4: Breakdown</option>
+					<option id="5">Scenario 5: Outlast</option>
+					<option id="6">Scenario 6: Recon II</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Special Rules</h2>
+				<div id="special-rules"></div>
+			</div>
+			<div class="col-md-6">
+				<h2>Victory Conditions</h2>
+				<div id="victory-conditions"><p>The first player to earn 5 more control points than the opponent immediately wins the game via scenario victory.</p><p>If the game ends before a player wins via scenario or assassination victory, the player with the most control points wins via scenario victory. If the players are tied for control points when the game ends, use the 3rd tiebreaker (army points destroyed) and if necessary the 4th tiebreaker (scenario presence) to determine the winner.</p></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<img id="scenario-image" src="img/" class="img-responsive center-block" style="margin-top:10px;" />
+				<br/><br/>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<select id="objective1" style="margin-bottom:10px;">
+							<option id="0">Select Objective</option>
+							<option id="1">Armory</option>
+							<option id="2">Fuel Cache</option>
+							<option id="3">Stockpile</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<img id="objective1-image" src="img/objective0.jpg" class="img-responsive center-block" style="margin-bottom:10px;" />
+					</div>
+				</div>
+			</div>
+		</div>
+    </div><!-- /.container -->
+<div class="modal-footer">
+        <div class="row">
+            <div class="col-md-12">
+			<ul class="list-inline">
+				<li>Current Version: <a href="http://privateerpress.com/organized-play/steamroller-tournaments" target="_New">Steamroller 2017</a></li>
+				<li><a href="http://privateerpress.com/" target="_New">Privateer Press</a></li>
+				<li><a href="legal.html">Legal Stuff</a></li>
+				<li><img style="width:24px;" src="img/Twitter_logo_blue.png"><a href="http://twitter.com/manifestfailure">@ManifestFailure</a></li>
+				<li><img style="width:24px;" src="img/facebook_logo.gif"><a href="https://www.facebook.com">Roll for Scenario Facebook</a></li>
+			</ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/rollforscenario-new.js"></script>
+  </body>
+</html>

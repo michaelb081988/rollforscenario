@@ -1,0 +1,16 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.scenario-button span {
+	display: none;
+}
+
+.comic {
+	font-family: "Comic Sans MS";
+	background-image: url("/img/broken.jpg");
+}

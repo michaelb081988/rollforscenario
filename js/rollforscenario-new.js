@@ -1,8 +1,7 @@
 	var ranNum = 0; // The random scenario number
 	var lasRanNum = 0; // The last scenario, used to skip re-rolling into the same one.
 	
-	//THE LONG JSON string. This is all the scenarios in a single JSON object.
-	var j = JSON.parse('{"scenario":[{"id":"1","title":"Scenario 1: The Pit II","killbox":"YES","special":"<p>Mark two rectangular zones (6\\" x 12\\") and one circular zone (12\\" diameter) and place two objectives in accordance with the diagram below. Starting on the second player\'s second turn, at the end of each player\'s turn, a player earns control points (CP) as follows:</p><ul><li><b>Zone: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul>","image":"scenario1-2017.jpg"},{"id":"2","killbox":"YES","title":"Scenario 2: Standoff","special":"<p>Mark two rectangular zones (6\\" × 12\\") and two circular zones (12\\" diameter) and place two objectives in accordance with the diagram below. Starting on the second player\'s second turn, at the end of each player\'s turn, a player earns control points (CP) as follows:</p> <ul><li><b>Zone: Control = 1 CP</b></li><li>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</li></ul>","image":"scenario2-2017.jpg"},{"id":"3","killbox":"YES","title":"Scenario 3: Spread the Net","special":"<p>Mark two rectangular zones (6\\" × 12\\") and one circular zone (12\\" diameter) and place two flags in accordance with the diagram below. Starting on the second player\'s second turn, at the end of each player\'s turn, a player earns control points (CP) as follows:</p> <ul> <li><b>Zone: Control = 1 CP</b></li><li><b>Enemy Flag: Control = 1 CP</b></li><li>Flag: Control = 1 CP</li></ul>","image":"scenario3-2017.jpg"},{"id":"4","killbox":"YES","title":"Scenario 4: Breakdown","special":"<p>Mark one rectangular zone (6\\" × 12\\") and two circular zones (12\\" diameter) in accordance with the diagram below. Starting on the second player\'s second turn, at the end of each player\'s turn, a player earns control points (CP) as follows:</p><ul><li>Zone: Control = 1 CP</li></ul>","image":"scenario4-2017.jpg"},{"id":"5","killbox":"YES","title":"Scenario 5: Outlast","special":"<p>Mark two circular zones (12\\" diameter) and place two flags in accordance with the diagram below. Starting on the second player\'s second turn, at the end of each player\'s turn, a player earns control points (CP) as follows:</p> <ul> <li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li></ul>","image":"scenario5-2017.jpg"},{"id":"6","killbox":"YES","title":"Scenario 6: Recon II","special":"<p>Mark one rectangular zone (6\\" × 12\\") and place two flags and two objectives in accordance with the diagram below. Starting on the second player\'s second turn, at the end of each player\'s turn, a player earns control points (CP) as follows:</p> <ul> <li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul>","image":"scenario6-2017.jpg"}]}');
+	// This will become the json string we read
 	
 	// This gets us a random number that is NOT the same as the old one. Multiply Math.random by the number of scenarios available and add 1 so we don't get 0.
 	function randomNumber() {
@@ -66,6 +65,10 @@
 		$('body').addClass("comic");
 		ga('send', 'event', 'Funny', 'Funny', 'Funny');
 	});
-	
-	// Aaaand begin. (this runs after the page loads...)
-	rollScenario();
+
+	//THE LONG JSON string. This is all the scenarios in a single JSON object. We get this from the file in the json folder.
+	var jqxhr = $.getJSON( "json/scenarios-2017.json", function() {})
+		.done(function(data) {
+			j = data; // Load the json data from the json file into the j variable declared at the top.
+			rollScenario();// Aaaand begin. (this runs after the json file is loaded...)
+		});

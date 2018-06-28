@@ -4,7 +4,7 @@ This repository is the current rollforscenario.com website.
 
 Changes should be made as pull requests. These changes will be checked before committing. This README file will be updated later on to better reflect the current set up.
 
-# Current Steamroller: 2017
+# Current Steamroller: 2018
 http://www.rollforscenario.com/
 
 # Todo list

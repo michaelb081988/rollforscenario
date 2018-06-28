@@ -38,7 +38,7 @@
 		
 		// Used for Google analytics.
 		// Lets me view how often scenarios come up.
-		ga('send', 'event', 'Scenario', 'Random', $('#scenario-name').text());
+		ga('send', 'event', 'Scenario 2018', 'Random', $('#scenario-name').text());
 	}
 	
 	// The reroll scenario button at the top of the page. Empties some of the screen text to cleanly randomise a new scenario.

@@ -7,9 +7,11 @@ Changes should be made as pull requests. These changes will be checked before co
 # Current Steamroller: 2018
 http://www.rollforscenario.com/
 
-# Todo list
-* ~~Seperate rollforscenario-new.js JSON entry to a seperate file and make the js file load it.~~
-* ~~Clean up unused js files~~
+# Making Changes
+To make changes to the site, make your changes on a local copy and create a pull request. Include the changes made and why in the request. I will review them and accept.
+
+No changes to the contributors.html page will be accepted. I will update the file based on the input.
+
 
 
 # Legal (Just in case)

@@ -1,0 +1,46 @@
+{  
+   "scenario":[  
+      {  
+ "id":"1",
+ "title":"Scenario 1: King of the Hill",
+ "killbox":"YES",
+ "special":"<p>Mark two rectangular zones (6˝ × 12˝), one circular zone (12˝ diameter), and place one flag and two objectives in accordance with the diagram below. Starting on the second player’s second turn, at the end of each player’s turn, a player earns control points (CP) as follows:</p><ul><li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul><p>There is no limit to the number of CPs a player can score.</p>",
+ "image":"scenario1-2019.png"
+      },
+      {  
+ "id":"2",
+ "killbox":"YES",
+ "title":"Scenario 2: Bunkers",
+ "special":"<p>Mark two rectangular zones (6˝ × 12˝) and place three flags and two objectives in accordance with the diagram below. Starting on the second player’s second turn, at the end of each player’s turn, a player earns control points (CP) as follows:</p><ul><li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul><p>There is no limit to the number of CPs a player can score.</p>",
+ "image":"scenario2-2019.png"
+      },
+      {  
+ "id":"3",
+ "killbox":"YES",
+ "title":"Scenario 3: Spread the Net",
+ "special":"<p>Mark two rectangular zones (6\" × 12\") and one circular zone (12\" diameter) and place two flags in accordance with the diagram below. Starting on the second player's second turn, at the end of each player's turn, a player earns control points (CP) as follows: </p> <ul> <li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li></ul><p>There is no limit to the number of CPs a player can score.</p>",
+ "image":"scenario3-2017.jpg"
+      },
+      {  
+ "id":"4",
+ "killbox":"YES",
+ "title":"Scenario 4: Invasion",
+ "special":"<p>Mark one rectangular zone (6\" × 12\") and two circular zones (12\" diameter) and place two objectives in accordance with the diagram below. Starting on the second player's second turn, at the end of each player's turn, a player earns control points (CP) as follows: </p><ul><li><b>Zone: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul><p>There is no limit to the number of CPs a player can score.</p>",
+ "image":"scenario4-2018.png"
+      },
+      {  
+ "id":"5",
+ "killbox":"YES",
+ "title":"Scenario 5: Anarchy",
+ "special":"<p>Mark two circular zones (12\" diameter) and place two flags and two objectives in accordance with the diagram below. Starting on the second player's second turn, at the end of each player's turn, a player earns control points (CP) as follows: </p> <ul> <li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul><p>There is no limit to the number of CPs a player can score.</p>",
+ "image":"scenario5-2019.png"
+      },
+      {  
+ "id":"6",
+ "killbox":"YES",
+ "title":"Scenario 6: Recon II",
+ "special":"<p>Mark one rectangular zone (6\" × 12\") and place two flags and two objectives in accordance with the diagram below. Starting on the second player's second turn, at the end of each player's turn, a player earns control points (CP) as follows: </p> <ul> <li><b>Zone: Control = 1 CP</b></li><li><b>Flag: Control = 1 CP</b></li><li><b>Enemy Objective: Destroyed/Removed from Play = 1 CP (once per objective)</b></li></ul><p>There is no limit to the number of CPs a player can score.</p>",
+ "image":"scenario6-2018.png"
+      }
+   ]
+}

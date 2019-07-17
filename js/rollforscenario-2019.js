@@ -24,7 +24,7 @@
 		
 		//Assign the scenario strings to the various HTML areas on the page.
 		$('#scenario-name').text(scen['title']);
-		$('#special-rules').html("<b>Kill Box: </b>" + scen['killbox'] + "<br/>" + scen['special']);
+		$('#special-rules').html("<b>Scenario Elements:</b>" + scen['special']);
 		$('#victory-conditions').html(scen['victory']);
 		$("#scenario-image").attr("src","img/"+scen['image']);
 		

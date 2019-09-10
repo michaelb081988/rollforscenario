@@ -1,16 +1,23 @@
 
-	var ranNum = 0; // The random scenario number
-	var lasRanNum = 0; // The last scenario, used to skip re-rolling into the same one.
+	var ranNum = -1; // The random scenario number
+	var lasRanNum = -1; // The last scenario, used to skip re-rolling into the same one.
 	
 	var numberOfScenarios = 6; // Current number of scenarios
 	
 	// This will become the JSON object we read
 	var j = {};	
 
-	// This gets us a random number that is NOT the same as the old one. Multiply Math.random by the number of scenarios available and add 1 so we don't get 0.
+	// This gets us a zero-based index that is NOT the same as the old one.
 	function randomNumber() {
-		if(lasRanNum == ranNum) {
-			ranNum = Math.floor(Math.random() * numberOfScenarios) +1;
+		if(lasRanNum < 0) {
+			// No scenario is selected so the probability is distributed over numberOfScenarios items.
+			ranNum = Math.floor(Math.random() * numberOfScenarios);
+		} else {
+			// A scenario is selected so the probability is distributed over (numberOfScenarios - 1) items since we want to avoid the current selection.
+			ranNum = Math.floor(Math.random() * (numberOfScenarios - 1));
+			if(ranNum >= lasRanNum) {
+				ranNum++;
+			}
 		}
 		lasRanNum = ranNum;
 		console.log(ranNum);
@@ -19,8 +26,7 @@
 	
 	// Get the scenario from the JSON object.
 	function getScenario() {
-		num = ranNum -1; //Get the JSON object number, random number -1 as the array is 0 indexed.
-		var scen = j.scenario[num]; //Get the scenario here
+		var scen = j.scenario[ranNum]; //Get the scenario here
 		
 		//Assign the scenario strings to the various HTML areas on the page.
 		$('#scenario-name').text(scen['title']);
@@ -35,6 +41,7 @@
 	function rollScenario() {
 		randomNumber();
 		getScenario();
+		$('#scenario')[0].selectedIndex = 0; //Resets the scenario dropdown so there is no visual inconsistency.
 		
 		// Used for Google analytics.
 		// Lets me view how often scenarios come up.
@@ -74,9 +81,9 @@
 		});
 	}
 	
-	// Calls chooseScenario() when the dropdown box is changed
+	// Calls chooseScenario() with a zero-based index when the dropdown box is changed
 	$(document).on('change', '#scenario', function() {
-		chooseScenario($('#scenario')[0].selectedIndex);
+		chooseScenario($('#scenario')[0].selectedIndex - 1);
 		});
 
 	// THE LONG JSON string. This is all the scenarios in a single JSON object. 

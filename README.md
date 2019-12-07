@@ -5,7 +5,7 @@ This repository is the current rollforscenario.com website.
 Changes should be made as pull requests. These changes will be checked before committing. This README file will be updated later on to better reflect the current set up.
 
 # Current Steamroller: 2019
-http://www.rollforscenario.com/
+https://www.rollforscenario.com/
 
 # Making Changes
 To make changes to the site, make your changes on a local copy and create a pull request. Include the changes made and why in the request. I will review them and accept.

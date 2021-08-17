@@ -17,7 +17,7 @@ var ranNum = 0;
 		$('#scenario-name').text(scen['title']);
 		$('#special-rules').html("<b>Kill Box: </b>" + scen['killbox'] + "<br/>" + scen['special']);
 		$('#victory-conditions').html(scen['victory']);
-		$("#scenario-image").attr("src","/img/"+scen['image']);
+		$("#scenario-image").attr("src","img/"+scen['image']);
 		return true;
 	}
 	
@@ -42,10 +42,10 @@ var ranNum = 0;
 	}
 	
 	$(document).on('change', '#objective1', function() {
-		$("#objective1-image").attr("src","/img/objective"+$("#objective1")[0].selectedIndex+".jpg");
+		$("#objective1-image").attr("src","img/objective"+$("#objective1")[0].selectedIndex+".jpg");
 	});
 	$(document).on('change', '#objective2', function() {
-		$("#objective2-image").attr("src","/img/objective"+$("#objective2")[0].selectedIndex+".jpg");
+		$("#objective2-image").attr("src","img/objective"+$("#objective2")[0].selectedIndex+".jpg");
 	});
 	$(document).on('change', '#scenario', function() {
 		chooseScenario($('#scenario')[0].selectedIndex);

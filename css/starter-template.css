@@ -12,5 +12,5 @@ body {
 
 .comic {
 	font-family: "Comic Sans MS";
-	background-image: url("/img/broken.jpg");
+	background-image: url("img/broken.jpg");
 }

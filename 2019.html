@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" manifest="junk-404-link">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Roll up a random scenario with RollForScenario.com. Steamroller 2021 scenarios brought up in a flash.">
+    <meta name="description" content="Roll up a random scenario with RollForScenario.com. Steamroller 2019 scenarios brought up in a flash.">
     <meta name="author" content="@ManifestFailure">
 	<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
@@ -63,10 +63,11 @@
             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Previous Years
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="/2018.html">SR 2018</a>
-              <a class="dropdown-item" href="/2017.html">SR 2017</a>
-            </div>
+			  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+			    <a class="dropdown-item" href="/2019.html">SR 2019</a>
+			    <a class="dropdown-item" href="/2018.html">SR 2018</a>
+			    <a class="dropdown-item" href="/2017.html">SR 2017</a>
+			  </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/legal.html">Legal</a>
@@ -84,13 +85,37 @@
   
   <div class="container">
   <div class="row">
-	<div class="col">
-	<h3>Legal Tidbit</h3>
-	<p>This site is 100% unofficial and is not supported by or affiliated with Privateer Press Inc.</p>
-	<p>Contents and Game Rules ©2001-2021 Privateer Press Inc. All Rights Reserved. Privateer Press, WARMACHINE©, Cygnar, Khador, Cryx, Protectorate of Menoth, Retribution of Scyrah, HORDES, Circle Orboros, Legion of Everblight, Skorne, Trollbloods, warcaster, warjack, warbeast, and all associated logos and slogans are trademarks of Privateer Press, Inc. Permission is hereby granted to photocopy and retain electronic copies. Any such duplications shall be intended solely for personal, noncommercial use and must maintain all copyrights, trademarks, or other notices contained therein or preserve all marks associated thereof. Privateer Press reserves the right to remove this permission or revise contents herein at any time for any reason.</p>
-</div>
+			<div class="col-md-6">
+				<h2 style="margin-top:0px;">Steamroller 2019</h2>
+				<h4 id="scenario-name"></h4>
+				
+			</div>
+			<div class="col-md-3" style="padding-top:5px;">
+				<button type="button" class="btn btn-danger" id="reroll">Re-roll scenario</button>
+			</div>
+			<div class="col-md-3" style="padding-top:5px;">
+				<select id="scenario">
+					<option hidden disabled selected value="">Choose a Scenario</option>
+				</select>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-12 col-sm-12">
+			<img id="scenario-image" src="img/" class="img-fluid center-block" style="margin-top:10px;" />
+				<br/><br/>
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12">
+			<h2>Special Rules</h2>
+				
+				<div id="special-rules"></div>
+				<p><b>Kill Box:</b> Starting on the first player's second turn, if a player ends their turn with a friendly warcaster, warlock, or infernal master completely within 12˝ of their table edge, the opponent immediately scores 2 control points.</p>
+				<p><b>Fixed Game Length:</b> At the end of the second player's seventh turn, the game ends automatically.</p>
+				
+				<h2>Victory Conditions</h2>
+				<div id="victory-conditions"><p>The first player to earn 5 more control points than the opponent immediately wins the game via scenario victory.</p><p>If the game ends before a player wins via scenario or assassination victory, the player with the most control points wins via scenario victory. If the players are tied for control points when the game ends, use the 3rd tiebreaker (army points destroyed) and if necessary the 4th tiebreaker (scenario presence) to determine the winner.</p></div>
+		</div>
 	</div>
-   </div>
+  </div>
   
 	<footer class="py-5 text-right">
     <div class="container">
@@ -111,5 +136,6 @@
     <script src="/js/jquery3.min.js"></script>
     <script src="/js/bootstrap4.min.js"></script>
     <script src="/js/bootstrap4.bundle.min.js"></script>
+	<script src="/js/rollforscenario-2019.js"></script>
   </body>
 </html>
